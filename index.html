@@ -1,1 +1,149 @@
-not visible 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat Ball Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .headline1 {
+            font-size: 45px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Lobster', cursive;
+            background: linear-gradient(to right, #ff0000, #ff7f00);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+            text-shadow: 3px 3px 6px black;
+        }
+        .headline2 {
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+            color: yellow;
+        }
+        .box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: cyan;
+            text-decoration: underline;
+        }
+        .blinking {
+            font-weight: bold;
+            color: white;
+            display: inline-block;
+            animation: blinkEffect 1s infinite alternate;
+        }
+        @keyframes blinkEffect {
+            0% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+        .gradient-border {
+            padding: 10px;
+            display: inline-block;
+            margin: 5px 0;
+            border: 2px solid transparent;
+            border-image: linear-gradient(to right, red, yellow) 1;
+        }
+        .links a {
+            display: block;
+            color: yellow;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 5px;
+            text-decoration: none;
+        }
+        .links a:hover {
+            color: lime;
+        }
+    </style>
+    <script>
+        fetch("https://ipapi.co/json/") // Fetch user location
+        .then(response => response.json())
+        .then(data => {
+            let state = data.region; // Get the state name
+            let translations = {
+                "Uttar Pradesh": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
+                "Madhya Pradesh": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
+                "Bihar": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
+                "Rajasthan": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
+                "Delhi": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
+                "Maharashtra": "बॅट बॉल भाकीतमध्ये आपले स्वागत आहे!", // Marathi
+                "West Bengal": "ব্যাট বল ভবিষ্যদ্বাণীতে স্বাগতম!", // Bengali
+                "Tamil Nadu": "பேட் பால் கணிப்புக்கு வரவேற்கிறோம்!", // Tamil
+                "Karnataka": "ಬ್ಯಾಟ್ ಬಾಲ್ ಭವಿಷ್ಯಕ್ಕೆ ಸ್ವಾಗತ!", // Kannada
+                "Telangana": "బ్యాట్ బాల్ ముందుచూపుకు స్వాగతం!", // Telugu
+                "Andhra Pradesh": "బ్యాట్ బాల్ ముందుచూపుకు స్వాగతం!", // Telugu
+                "Punjab": "ਬੈਟ ਬਾਲ ਪੇਸ਼ਗੋਈ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!", // Punjabi
+                "Kerala": "ബാറ്റ് ബോൾ പ്രവചനത്തിലേക്ക് സ്വാഗതം!", // Malayalam
+                "Bhojpuri": "बेट बॉल भविस्से में रउरा स्वागत बा!", // Bhojpuri
+                "DEFAULT": "Welcome to Bat Ball Prediction!" // Default English
+            };
+
+            let translatedText = translations[state] || translations["DEFAULT"];
+            document.getElementById("welcome").innerText = translatedText;
+        })
+        .catch(error => console.error("GeoIP fetch error:", error));
+    </script>
+</head>
+<body>
+
+    <h1 id="welcome">Loading...</h1>
+
+    <h2 class="headline2">Our Prediction Rate: 85%</h2>
+
+    <div class="box">
+        <h2>Upcoming Prediction:<br>(Click on Match)</h2>
+        <p><a href="###" class="blinking gradient-border">WPL<br> Delhi Capital Women VS Mumbai Indians Women</a></p>
+        <p><a href="your-link-2" class="blinking gradient-border">Match2</a></p>
+        <p><a href="your-link-3" class="blinking gradient-border">Match3</a></p>
+        <p><a href="your-link-4" class="blinking gradient-border">Match4</a></p>
+        <p><a href="your-link-5" class="blinking gradient-border">Match5</a></p>
+    </div>
+
+    <div class="box">
+        <h2>Recent Prediction:<br>(Click on Match)</h2>
+        <p><a href="https://whatsapp.com/channel/0029VaiW8Ld4inotAe8Evt3m/705" class="blinking gradient-border">ICC World-Cup League 2 <br>Canada VS Namibia✅ PASS<br>Namibia Total Score 245 Under</a></p>
+        <p><a href="your-link-7" class="blinking gradient-border">Prediction 2</a></p>
+        <p><a href="your-link-8" class="blinking gradient-border">Prediction 3</a></p>
+        <p><a href="your-link-9" class="blinking gradient-border">Prediction 4</a></p>
+        <p><a href="your-link-10" class="blinking gradient-border">Prediction 5</a></p>
+    </div>
+
+    <div class="box">
+        <h2>We will Give Prediction in Bet Slip Number with App Name</h2>
+        <p>Search Bet Slip Number with Mentioned name.</p>
+        <p>If you don't have the App, get it from the links below (100% bonus):</p>
+        <div class="links">
+            <a href="https://tinyurl.com/4serd89r">Mega Pari</a>
+            <a href="https://pari-pulse.com/9Sr">Pari Pulse</a>
+            <a href="https://fairplaypro.com/signup?referral_code=rBuHa0">FairPlay</a>
+            <a href="#">1xbet</a>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>Visit Our Social Media:</h2>
+        <div class="links">
+            <a href="https://www.instagram.com/p/DEU3LfzT03s/?igsh=MXNzcjJ3MHdyaHRsMQ==">Instagram</a>
+            <a href="https://t.me/newskind24hr">Telegram</a>
+            <a href="https://whatsapp.com/channel/0029VaiW8Ld4inotAe8Evt3m">WhatsApp</a>
+            <a href="https://www.youtube.com/live/VTh2piP96cc?si=HKOOcQbP10x7wAHR">YouTube</a>
+        </div>
+    </div>
+
+</body>
+</html>
