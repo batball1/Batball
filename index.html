@@ -71,32 +71,33 @@
         }
     </style>
     <script>
-        fetch("https://ipapi.co/json/") // Fetch user location
-        .then(response => response.json())
-        .then(data => {
-            let state = data.region; // Get the state name
-            let translations = {
-                "Uttar Pradesh": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
-                "Madhya Pradesh": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
-                "Bihar": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
-                "Rajasthan": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
-                "Delhi": "बेट बॉल भविष्यवाणी में आपका स्वागत है!", // Hindi
-                "Maharashtra": "बॅट बॉल भाकीतमध्ये आपले स्वागत आहे!", // Marathi
-                "West Bengal": "ব্যাট বল ভবিষ্যদ্বাণীতে স্বাগতম!", // Bengali
-                "Tamil Nadu": "பேட் பால் கணிப்புக்கு வரவேற்கிறோம்!", // Tamil
-                "Karnataka": "ಬ್ಯಾಟ್ ಬಾಲ್ ಭವಿಷ್ಯಕ್ಕೆ ಸ್ವಾಗತ!", // Kannada
-                "Telangana": "బ్యాట్ బాల్ ముందుచూపుకు స్వాగతం!", // Telugu
-                "Andhra Pradesh": "బ్యాట్ బాల్ ముందుచూపుకు స్వాగతం!", // Telugu
-                "Punjab": "ਬੈਟ ਬਾਲ ਪੇਸ਼ਗੋਈ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!", // Punjabi
-                "Kerala": "ബാറ്റ് ബോൾ പ്രവചനത്തിലേക്ക് സ്വാഗതം!", // Malayalam
-                "Bhojpuri": "बेट बॉल भविस्से में रउरा स्वागत बा!", // Bhojpuri
-                "DEFAULT": "Welcome to Bat Ball Prediction!" // Default English
-            };
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("https://ipapi.co/json/")
+                .then(response => response.json())
+                .then(data => {
+                    let state = data.region;
+                    let translations = {
+                        "Uttar Pradesh": "बेट बॉल भविष्यवाणी में आपका स्वागत है!",
+                        "Madhya Pradesh": "बेट बॉल भविष्यवाणी में आपका स्वागत है!",
+                        "Bihar": "बेट बॉल भविष्यवाणी में आपका स्वागत है!",
+                        "Rajasthan": "बेट बॉल भविष्यवाणी में आपका स्वागत है!",
+                        "Delhi": "बेट बॉल भविष्यवाणी में आपका स्वागत है!",
+                        "Maharashtra": "बॅट बॉल भाकीतमध्ये आपले स्वागत आहे!",
+                        "West Bengal": "ব্যাট বল ভবিষ্যদ্বাণীতে স্বাগতম!",
+                        "Tamil Nadu": "பேட் பால் கணிப்புக்கு வரவேற்கிறோம்!",
+                        "Karnataka": "ಬ್ಯಾಟ್ ಬಾಲ್ ಭವಿಷ್ಯಕ್ಕೆ ಸ್ವಾಗತ!",
+                        "Telangana": "బ్యాట్ బాల్ ముందుచూపుకు స్వాగతం!",
+                        "Andhra Pradesh": "బ్యాట్ బాల్ ముందుచూపుకు స్వాగతం!",
+                        "Punjab": "ਬੈਟ ਬਾਲ ਪੇਸ਼ਗੋਈ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ!",
+                        "Kerala": "ബാറ്റ് ബോൾ പ്രവചനത്തിലേക്ക് സ്വാഗതം!",
+                        "DEFAULT": "Welcome to Bat Ball Prediction!"
+                    };
 
-            let translatedText = translations[state] || translations["DEFAULT"];
-            document.getElementById("welcome").innerText = translatedText;
-        })
-        .catch(error => console.error("GeoIP fetch error:", error));
+                    let translatedText = translations[state] || translations["DEFAULT"];
+                    document.getElementById("welcome").innerText = translatedText;
+                })
+                .catch(error => console.error("GeoIP fetch error:", error));
+        });
     </script>
 </head>
 <body>
@@ -107,20 +108,20 @@
 
     <div class="box">
         <h2>Upcoming Prediction:<br>(Click on Match)</h2>
-        <p><a href="Vishmi Gunaratne under 20 runs" class="blinking gradient-border">.T20.<br> Newzealand Women VS Srilanka Women</a></p>
-        <p><a href="your-link-2" class="blinking gradient-border">Match2</a></p>
-        <p><a href="your-link-3" class="blinking gradient-border">Match3</a></p>
-        <p><a href="your-link-4" class="blinking gradient-border">Match4</a></p>
-        <p><a href="your-link-5" class="blinking gradient-border">Match5</a></p>
+        <p><a href="#" class="blinking gradient-border">.T20.<br> New Zealand Women VS Sri Lanka Women</a></p>
+        <p><a href="#" class="blinking gradient-border">Match2</a></p>
+        <p><a href="#" class="blinking gradient-border">Match3</a></p>
+        <p><a href="#" class="blinking gradient-border">Match4</a></p>
+        <p><a href="#" class="blinking gradient-border">Match5</a></p>
     </div>
 
     <div class="box">
         <h2>Recent Prediction:<br>(Click on Match)</h2>
-        <p><a href="https://whatsapp.com/channel/0029VaiW8Ld4inotAe8Evt3m/705" class="blinking gradient-border">ICC World-Cup League 2 <br>Canada VS Namibia✅ PASS<br>Namibia Total Score 245 Under</a></p>
-        <p><a href="your-link-7" class="blinking gradient-border">Prediction 2</a></p>
-        <p><a href="your-link-8" class="blinking gradient-border">Prediction 3</a></p>
-        <p><a href="your-link-9" class="blinking gradient-border">Prediction 4</a></p>
-        <p><a href="your-link-10" class="blinking gradient-border">Prediction 5</a></p>
+        <p><a href="https://whatsapp.com/channel/0029VaiW8Ld4inotAe8Evt3m/705" target="_blank" class="blinking gradient-border">ICC World-Cup League 2 <br>Canada VS Namibia✅ PASS<br>Namibia Total Score 245 Under</a></p>
+        <p><a href="#" class="blinking gradient-border">Prediction 2</a></p>
+        <p><a href="#" class="blinking gradient-border">Prediction 3</a></p>
+        <p><a href="#" class="blinking gradient-border">Prediction 4</a></p>
+        <p><a href="#" class="blinking gradient-border">Prediction 5</a></p>
     </div>
 
     <div class="box">
@@ -128,22 +129,22 @@
         <p>Search Bet Slip Number with Mentioned name.</p>
         <p>If you don't have the App, get it from the links below (100% bonus):</p>
         <div class="links">
-            <a href="https://tinyurl.com/4serd89r">MegaPari<br>(Promo Code NK100)</a>
-            <a href="https://pari-pulse.com/9Sr">PariPulse<br>Registration Promo Code 99</a>
-            <a href="https://fairplaypro.com/signup?referral_code=rBuHa0">Coming Soon</a>
-            <a href="#">Coming Soon</a>
+            <a href="https://tinyurl.com/4serd89r" target="_blank">MegaPari<br>(Promo Code NK100)</a>
+            <a href="https://pari-pulse.com/9Sr" target="_blank">PariPulse<br>Registration Promo Code 99</a>
+            <a href="https://fairplaypro.com/signup?referral_code=rBuHa0" target="_blank">Coming Soon</a>
+            <a href="#" target="_blank">Coming Soon</a>
         </div>
     </div>
 
     <div class="box">
         <h2>Visit Our Social Media:</h2>
         <div class="links">
-            <a href="https://www.instagram.com/p/DEU3LfzT03s/?igsh=MXNzcjJ3MHdyaHRsMQ==">Instagram</a>
-            <a href="https://t.me/newskind24hr">Telegram</a>
-            <a href="https://whatsapp.com/channel/0029VaiW8Ld4inotAe8Evt3m">WhatsApp</a>
-            <a href="https://www.youtube.com/live/VTh2piP96cc?si=HKOOcQbP10x7wAHR">YouTube</a>
+            <a href="https://www.instagram.com/p/DEU3LfzT03s/?igsh=MXNzcjJ3MHdyaHRsMQ==" target="_blank">Instagram</a>
+            <a href="https://t.me/newskind24hr" target="_blank">Telegram</a>
+            <a href="https://whatsapp.com/channel/0029VaiW8Ld4inotAe8Evt3m" target="_blank">WhatsApp</a>
+            <a href="https://www.youtube.com/live/VTh2piP96cc?si=HKOOcQbP10x7wAHR" target="_blank">YouTube</a>
         </div>
     </div>
 
 </body>
-  </html>
+</html>
